@@ -30,7 +30,7 @@ xbindkeys &
 
 thunar --daemon &
 
-sh ~/.fehbg &
+sh ~/code/shell/paperchanger &
 
 conky -c ~/.config/conky/.conky-dwm | while read -r; do xsetroot -name "$REPLY"; done &
 
