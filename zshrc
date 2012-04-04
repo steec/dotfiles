@@ -3,10 +3,10 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export PATH=/home/stephen/bin:/usr/local/apache-maven-2.2.1/bin:$PATH
-export CATALINA_HOME=/usr/share/tomcat6
-export CLASSPATH=/usr/share/maven-repo/
+export PATH=/home/stephen/bin:$PATH
+#export JAVA_HOME=/usr/lib/jvm/java-6-sun
+#export CATALINA_HOME=/usr/share/tomcat6
+#export CLASSPATH=/usr/share/maven-repo/
 
 setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep

@@ -20,19 +20,25 @@ xset fp rehash
 # ...or the Window Manager of your choice
 #exec ck-launch-session dbus-launch openbox-session 
 
+#~/bin/wireless.sh &
+
 numlockx &
 
 xbindkeys & 
 
-#cairo-compmgr &
+xrdb ~/.Xresources &
+
+cairo-compmgr &
 
 #nm-applet & 
 
-thunar --daemon &
+#thunar --daemon &
 
-sh ~/code/shell/paperchanger &
+sh ~/.fehbg
+
+#sh ~/code/shell/paperchanger.sh &
 
 conky -c ~/.config/conky/.conky-dwm | while read -r; do xsetroot -name "$REPLY"; done &
 
-exec ck-launch-session dbus-launch dwm
+exec ck-launch-session dbus-launch ~/bin/startdwm
 
