@@ -30,7 +30,7 @@ xrdb ~/.Xresources &
 
 cairo-compmgr &
 
-#nm-applet & 
+nm-applet & 
 
 #thunar --daemon &
 
@@ -38,7 +38,7 @@ sh ~/.fehbg
 
 #sh ~/code/shell/paperchanger.sh &
 
-conky -c ~/.config/conky/.conky-dwm | while read -r; do xsetroot -name "$REPLY"; done &
+conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
 exec ck-launch-session dbus-launch ~/bin/startdwm
 

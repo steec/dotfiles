@@ -3,7 +3,7 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-export PATH=/home/stephen/bin:$PATH
+export PATH=/home/stephen/bin:/home/stephen/code/c/kids:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
