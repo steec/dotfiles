@@ -1,0 +1,15 @@
+#include "colors/current"
+
+
+
+
+! URxvt -----------------------------------------------------------------------
+URxvt.font:						-*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
+URxvt.boldFont:				-*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
+URxvt.boldItalicFont: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
+URxvt.ItalicFont:			-*-terminus-medium-*-*-*-17-*-*-*-*-*-*-* 
+
+URxvt*iconFile:			/home/stephen/.icons/Faenza/apps/32/utilities-terminal.png
+URxvt*scrollBar:false
+
+URxvt*depth: 32
