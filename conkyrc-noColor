@@ -7,4 +7,4 @@ cpu_avg_samples 2
 net_avg_samples 2
 
 TEXT
-cpu: ${cpu}%::bat:${battery_short} ${time %a %b %d %I:%M%P}
+cpu:${cpu}% :: bat:${battery_short}  ${time %a %b %d %I:%M%P}

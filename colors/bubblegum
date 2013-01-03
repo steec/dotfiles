@@ -31,5 +31,5 @@ URxvt.color7:	#cccccc
 URxvt.color15: #ffffff
 
 !URxvt.background: rgba:0000/0000/0000/dddd
-*.background: #1c1c1c
-*.foreground: white
+URxvt.background: #1c1c1c
+URxvt.foreground: white

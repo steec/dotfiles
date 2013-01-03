@@ -22,23 +22,30 @@ xset fp rehash
 
 #~/bin/wireless.sh &
 
+urxvtd &
+
+sh ~/.fehbg &
+
 numlockx &
 
 xbindkeys & 
 
 xrdb ~/.Xresources &
 
-cairo-compmgr &
+#cairo-compmgr &
 
-nm-applet & 
+#nm-applet & 
 
 #thunar --daemon &
 
-sh ~/.fehbg
+dropboxd &
 
 #sh ~/code/shell/paperchanger.sh &
 
 conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
-exec ck-launch-session dbus-launch ~/bin/startdwm
+#conky -c ~/.conkyrc | dzen2 -p &
 
+exec /home/stephen/bin/startdwm
+
+#exec gnome-session

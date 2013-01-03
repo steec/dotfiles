@@ -3,7 +3,7 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-export PATH=/home/stephen/bin:/home/stephen/code/c/kids:/home/stephen/.gem/ruby/1.9.1/bin:$PATH
+export PATH=/home/stephen/bin:/home/stephen/code/c/kids:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
@@ -67,22 +67,19 @@ PR_PWD_YELLOW=$'%{\e[38;5;226m%}'
 
 #PROMPT=$'┌─[\u@\h \W]\[\e[0;32m\][${cwd}\t]\[\033[0m\] ${fill}\n\[\033[0m\]└─■ '
 
-PROMPT=$'${PR_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
+PROMPT=$'${PR_WHITE}%n@%m ${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
 ${PR_BRIGHT_BLACK}>${PR_RESET}${PR_BLUE}>${PR_BRIGHT_BLUE}>${PR_RESET} '
 
-	alias ls="ls++"
+	alias ls="ls --color"
 	alias lsl="ls -lh --color"
 	alias lsa="ls -alh --color"
-	alias du1="du -h --max-depth=1"
-	#alias to make Octopress not glob
-	alias rake="noglob rake"
 
 	d=.dircolors
 	test -r $d && eval "$(dircolors $d)"
 
 	else
 
-PROMPT=$'${PR_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_GREEN}%~${PR_BLUE})
+PROMPT=$'${PR_WHITE}%n@%m ${PR_BLUE}(${PR_GREEN}%~${PR_BLUE})
 ${PR_BRIGHT_BLACK}>${PR_BLUE}>${PR_BRIGHT_BLUE}>%{$reset_color%} '
 
 #	PROMPT=$'${PR_BRIGHT_BLACK}.${PR_RESET}${PR_BLUE}:${PR_BRIGHT_BLUE}(%T %W)${PR_RESET}${PR_BLUE}:${PR_BRIGHT_BLACK}.........${PR_BRIGHT_BLACK}

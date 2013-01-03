@@ -64,9 +64,9 @@ hi SpecialComment  ctermfg=174    guifg=#D78787
 hi Debug           ctermfg=174    guifg=#D78787
 
 hi Underlined      ctermfg=fg    guifg=fg
-hi Ignore          ctermfg=bg    guifg=bg
+hi Ignore          ctermfg=0    guifg=bg
 hi Error           ctermfg=231    ctermbg=167    guifg=#FFFFFF    guibg=#D75F5F
-hi Todo            ctermfg=189    ctermbg=bg     cterm=none    guifg=#D7D7FF    guibg=bg    gui=none
+hi Todo            ctermfg=189    ctermbg=none cterm=none    guifg=#D7D7FF    guibg=bg    gui=none
 
 "
 " minor groups
@@ -82,8 +82,8 @@ hi PmenuSel        ctermfg=231    ctermbg=244    guifg=#FFFFFF    guibg=#808080
 hi PmenuSbar       ctermfg=231    ctermbg=244    guifg=#FFFFFF    guibg=#808080
 hi WildMenu        ctermfg=71     ctermbg=237    cterm=none    guifg=#5FAF5F    guibg=#3A3A3A    gui=none
 
-hi Visual          ctermfg=bg     ctermbg=117    guifg=bg    guibg=#87D7FF
-hi VisualNOS       ctermfg=bg     ctermbg=116    guifg=bg    guibg=#87D7D7
+hi Visual          ctermfg=0     ctermbg=117    guifg=bg    guibg=#87D7FF
+hi VisualNOS       ctermfg=0     ctermbg=116    guifg=bg    guibg=#87D7D7
 hi VertSplit       ctermfg=244    ctermbg=237    cterm=none    guifg=#808080    guibg=#3A3A3A    gui=none
 hi LineNr          ctermfg=244    ctermbg=256    guifg=#808080    guibg=#3A3A3A
 
@@ -93,7 +93,7 @@ hi NonText         ctermfg=244    guifg=#808080
 hi MatchParen      ctermfg=16     ctermbg=72    guifg=#000000    guibg=#5FAF87
 hi Directory       ctermfg=103    guifg=#8787AF
 
-hi ErrorMsg        ctermfg=210    ctermbg=bg    guifg=#FF8787    guibg=bg
+hi ErrorMsg        ctermfg=210    ctermbg=none guifg=#FF8787    guibg=bg
 hi WarningMsg      ctermfg=140    guifg=#AF87D7
 hi MoreMsg         ctermfg=72    guifg=#5FAF87
 hi ModeMsg         ctermfg=222    guifg=#FFD787
@@ -102,7 +102,7 @@ hi Search          ctermfg=16     ctermbg=179     cterm=none    guifg=#000000   
 hi IncSearch       ctermfg=231    ctermbg=168     cterm=none    guifg=#FFFFFF    guibg=#D75F87    gui=none
 hi Question        ctermfg=38    guifg=#00AFD7
 
-hi Folded          ctermfg=244    ctermbg=bg    guifg=#808080    guibg=bg
+hi Folded          ctermfg=244    ctermbg=none guifg=#808080    guibg=bg
 hi FoldColumn      ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
 hi SignColumn      ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
 hi ColorColumn     ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
@@ -131,10 +131,10 @@ hi diffText        ctermfg=16     ctermbg=211    guifg=#000000    guibg=#FF87AF
 hi diffChange      ctermfg=16     ctermbg=217    guifg=#000000    guibg=#FFAFAF
 hi diffOldLine     ctermfg=104    guifg=#8787D7
 
-hi SpellBad        ctermfg=210    ctermbg=bg      cterm=underline    guifg=#FF8787    guibg=bg    gui=underline
-hi SpellCap        ctermfg=174    ctermbg=bg      cterm=underline    guifg=#D78787    guibg=bg    gui=underline
-hi SpellRare       ctermfg=181    ctermbg=bg      cterm=underline    guifg=#D7AFAF    guibg=bg    gui=underline
-hi SpellLocal      ctermfg=180    ctermbg=bg      cterm=underline    guifg=#D7AF87    guibg=bg    gui=underline
+hi SpellBad        ctermfg=210    ctermbg=none cterm=underline    guifg=#FF8787    guibg=bg    gui=underline
+hi SpellCap        ctermfg=174    ctermbg=none cterm=underline    guifg=#D78787    guibg=bg    gui=underline
+hi SpellRare       ctermfg=181    ctermbg=none cterm=underline    guifg=#D7AFAF    guibg=bg    gui=underline
+hi SpellLocal      ctermfg=180    ctermbg=none cterm=underline    guifg=#D7AF87    guibg=bg    gui=underline
 
 hi mkdCode         ctermfg=244    guifg=#808080
 hi mkdURL          ctermfg=111    guifg=#87AFFF

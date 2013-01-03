@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/stephen/.dropbox'
 let g:netrw_dirhist_2='/etc/byobu'
 let g:netrw_dirhist_3='/etc/NetworkManager/system-connections'
+let g:netrw_dirhist_4='/home/stephen/.wmii'
+let g:netrw_dirhist_5='/etc/rc.d'
+let g:netrw_dirhist_6='/home/stephen/.mpd'
