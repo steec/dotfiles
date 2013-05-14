@@ -3,12 +3,12 @@ URxvt.color0: #222222
 URxvt.color8: #444444
 
 ! Red
-URxvt.color1: #e5786d
-URxvt.color9: #9e2b18
+URxvt.color1: #9e2b18
+URxvt.color9: #e5786d
 
 ! Green
-URxvt.color2: #95e454
-URxvt.color10: #6e7b45
+URxvt.color2: #6e7b45
+URxvt.color10: #95e454
 
 ! Yellow
 URxvt.color3: #eab93d
@@ -33,3 +33,39 @@ URxvt.color15: #ffffff
 !URxvt.background: rgba:0000/0000/0000/dddd
 *.background: #1c1c1c
 *.foreground: white
+
+
+! Black
+xterm.color0: #222222
+xterm.color8: #444444
+
+! Red
+xterm.color1: #e5786d
+xterm.color9: #9e2b18
+
+! Green
+xterm.color2: #95e454
+xterm.color10: #6e7b45
+
+! Yellow
+xterm.color3: #eab93d
+xterm.color11: #ffc123
+
+! Blue
+xterm.color4: #204a87
+xterm.color12: #87afff
+
+! Mangenta
+xterm.color5: #ce5c00
+xterm.color13: #f57900
+
+! Cyan 
+xterm.color6: #89b6e2
+xterm.color14: #46a4ff
+
+! White
+xterm.color7:	#cccccc
+xterm.color15: #ffffff
+
+!xterm.background: rgba:0000/0000/0000/dddd
+xterm.background: #1c1c1c

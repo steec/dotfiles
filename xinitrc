@@ -14,13 +14,9 @@ fi
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
-#exec ck-launch-session dbus-launch openbox-session 
+#cairo-compmgr &
 
-#~/bin/wireless.sh &
+#xcompmgr &
 
 urxvtd &
 
@@ -32,20 +28,24 @@ xbindkeys &
 
 xrdb ~/.Xresources &
 
-#cairo-compmgr &
-
-#nm-applet & 
-
 #thunar --daemon &
 
-dropboxd &
+#tint2 &
+
+#dropboxd &
+
+mpd &
+
+#systemd --user &
 
 #sh ~/code/shell/paperchanger.sh &
 
 conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
-#conky -c ~/.conkyrc | dzen2 -p &
-
+#exec ck-launch-session dbus-launch openbox-session 
+#exec i3
 exec /home/stephen/bin/startdwm
-
-#exec gnome-session
+#exec enlightenment_start
+#exec openbox-session
+#exec awesome
+#exec wmii

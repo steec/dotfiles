@@ -7,11 +7,12 @@ au filetype c setlocal mp=gcc\ %
 
 :let java_highlight_all=1
 
+set guifont=Inconsolata\ 9
 set nu
 set nocompatible
 set tabstop=4
 set shiftwidth=4
-set background=dark
+set background=light
 set history=50
 set wildmode=list:longest,full
 set shortmess+=r
@@ -24,10 +25,11 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
-"let g:zenburn_high_Contrast=1
-"colorscheme zenburn
-colorscheme bubblegum2-mine
-"colorscheme wombat256-mine
+"colorscheme bubblegum2-mine
+colo mine
+
+"toggle NERDTree
+map <silent> <F3> :NERDTree<CR>
 
 "Press Space to turn off highlighting and clear any message
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>

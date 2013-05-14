@@ -18,7 +18,7 @@ let g:colors_name="bubblegum"
 " preferred groups
 " (see `:h w18`)
 "
-hi Normal          ctermfg=249    ctermbg=NONE cterm=none    guifg=#B2B2B2    guibg=#030303 gui=none
+hi Normal          ctermfg=249    ctermbg=NONE cterm=none    guifg=#ffffff guibg=#1c1c1c gui=none
 hi Comment         ctermfg=244    guifg=#808080
 
 " yellow

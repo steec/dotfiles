@@ -1,6 +1,7 @@
 #define t_bg_floor     #FFFEF3
 #define t_bg_dip       #FFF9EE
-#define t_background   #FAF0E6
+!#define t_background   #FAF0E6
+#define t_background	#EEEEEE
 #define t_bg_bump      #E7DFD5
 #define t_fg_comment   #8F98A1
 #define t_foreground   #69717A
