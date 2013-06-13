@@ -25,8 +25,8 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
-"colorscheme bubblegum2-mine
-colo mine
+colorscheme bubblegum2-mine
+"colo mine
 
 "toggle NERDTree
 map <silent> <F3> :NERDTree<CR>

@@ -82,8 +82,12 @@ fi
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ############## Aliases
-alias ls="ls --color -h --group-directories-first"
-alias lsa="ls -Al"
+#alias ls="ls --color -h --group-directories-first"
+#alias lsa="ls -Al"
+alias ls="ls++"
+alias lsl="ls++ --potsf"
+alias lsa="ls++ --potsf -a"
+alias lsn="ls"
 alias du1="du -h --max-depth=1"
 #alias to make Octopress not glob
 alias rake="noglob rake"
