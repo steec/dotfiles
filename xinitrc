@@ -34,7 +34,7 @@ xrdb ~/.Xresources &
 
 #dropboxd &
 
-mpd &
+#mpd &
 
 #systemd --user &
 
@@ -42,6 +42,9 @@ mpd &
 
 conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
+#nm-applet & 
+
+#exec gnome-session-cinnamon
 #exec ck-launch-session dbus-launch openbox-session 
 #exec i3
 exec /home/stephen/bin/startdwm

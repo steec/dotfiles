@@ -3,7 +3,7 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-export PATH=/home/stephen/bin:/home/stephen/code/c/kids:/home/stephen/.gem/ruby/1.9.1/bin:$PATH
+export PATH=/home/stephen/bin:/home/stephen/code/android/adt-bundle-linux/sdk/platform-tools/:/home/stephen/code/android/adt-bundle-linux/sdk/tools/:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
@@ -60,9 +60,13 @@ setprompt() {
 		PR_PWD_DEFAULT=$'%{\e[38;5;78m%}'
 		PR_PWD_YELLOW=$'%{\e[38;5;226m%}'
 
-		PROMPT=$'${PR_RED} \u2584
-${PR_BRIGHT_BLUE}\u2587${PR_RED}\u2518${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
-${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
+#		PROMPT=$'${PR_RED} \u2584
+#${PR_BRIGHT_BLUE}\u2587${PR_RED}\u2518${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
+#${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
+
+		PROMPT=$'
+${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
+${PR_RESET}${PR_BLUE}>${PR_BRIGHT_BLUE}>${PR_BRIGHT_WHITE}>${PR_RESET} '
 
 	else
 
@@ -82,12 +86,12 @@ fi
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ############## Aliases
-#alias ls="ls --color -h --group-directories-first"
-#alias lsa="ls -Al"
-alias ls="ls++"
-alias lsl="ls++ --potsf"
-alias lsa="ls++ --potsf -a"
-alias lsn="ls"
+alias ls="ls --color -h --group-directories-first"
+alias lsa="ls -Al"
+#alias ls="ls++"
+#alias lsl="ls++ --potsf"
+#alias lsa="ls++ --potsf -a"
+#alias lsn="ls"
 alias du1="du -h --max-depth=1"
 #alias to make Octopress not glob
 alias rake="noglob rake"

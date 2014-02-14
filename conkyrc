@@ -9,4 +9,4 @@ mpd_host 127.0.0.1
 mpd_port 6600
 
 TEXT
-${if_match "${mpd_status}" =="Playing"}$mpd_smart $else${mpd_status}$endif    .::.    net${if_up wlan0}${wireless_essid wlan0} ${wireless_link_qual wlan0}% ${totaldown wlan0}${endif}::${if_up usb0}usb0 ${totaldown usb0}${endif}::${if_up eth0}eth0 ${totaldown eth0}${endif}mem${mem}cpu${cpu}%bat${battery_short}cal${time %a %b %d}${time %I:%M%P}
+${if_match "${mpd_status}" =="Playing"}$mpd_smart $else${mpd_status}$endif    .::.    net${if_up wlan0}${wireless_essid wlan0} ${wireless_link_qual wlan0}% ${totaldown wlan0}::${endif}${if_up usb0}usb0 ${totaldown usb0}::${endif}${if_up eth0}eth0 ${totaldown eth0}${endif}mem${mem}cpu${cpu}%bat${battery_short}cal${time %a %b %d}${time %I:%M%P}

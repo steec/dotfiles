@@ -34,9 +34,9 @@
 *.background: #282a2e
 *.foreground: #c5c8c6
 
-!*.background: #ffffff
-!*.foreground: #121212
-!*.foreground: #282a2e
+
+!URxvt.background: rgba:0000/0000/0000/cccc
+!URxvt.background: rgba:55cc/3333/1177/cccc
 
 URxvt.colorUL: #b294bb
 

@@ -46,3 +46,6 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 \set guioptions+=T <Bar>
 \set guioptions+=m <Bar>
 \endif<CR>
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
