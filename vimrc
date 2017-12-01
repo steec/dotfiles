@@ -28,6 +28,10 @@ set incsearch
 colorscheme bubblegum2-mine
 "colo mine
 
+set cursorline
+hi clear Cursorline 
+hi Cursorline gui=underline cterm=underline
+
 "toggle NERDTree
 map <silent> <F3> :NERDTree<CR>
 

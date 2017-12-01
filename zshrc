@@ -3,6 +3,8 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
+cd ~
+
 export PATH=/home/stephen/bin:/home/stephen/code/android/adt-bundle-linux/sdk/platform-tools/:/home/stephen/code/android/adt-bundle-linux/sdk/tools/:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
@@ -27,6 +29,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# vcs_info configuration
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '(%b)%S'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:*' formats '(%b)%S %u%c'
 
 if [[ "$TERM" == "xterm" ]]; then
 	export TERM=xterm-256color
@@ -39,6 +48,7 @@ function precmd() {
 		else
 				PR_PWDCOLOR=$'%{\e[31m%}'
 		fi
+		vcs_info
 
 }
 
@@ -64,10 +74,12 @@ setprompt() {
 #${PR_BRIGHT_BLUE}\u2587${PR_RED}\u2518${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
 #${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
 
-		PROMPT=$'
-${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
-${PR_RESET}${PR_BLUE}>${PR_BRIGHT_BLUE}>${PR_BRIGHT_WHITE}>${PR_RESET} '
+#		PROMPT=$'
+#${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
+#${PR_RESET}${PR_BLUE}>${PR_BRIGHT_BLUE}>${PR_BRIGHT_WHITE}>${PR_RESET} '
 
+		PROMPT=$'
+${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> '
 	else
 
 		PROMPT=$'%n@%m (%~)\n>>> '
@@ -76,10 +88,10 @@ ${PR_RESET}${PR_BLUE}>${PR_BRIGHT_BLUE}>${PR_BRIGHT_WHITE}>${PR_RESET} '
 
 setprompt
 
-if [ $(tty) = '/dev/tty1' ]; then
-	startx 2> /dev/null
-	logout
-fi
+#if [ $(tty) = '/dev/tty1' ]; then
+#	startx 2> /dev/null
+#	logout
+#fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
