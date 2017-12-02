@@ -2,17 +2,18 @@
 
 # Check for current dotfiles in $HOME
 
-#files="$HOME/.zshrc $HOME/.vimrc $HOME/.tmux.conf"
-files="test1 test2 test3"
-suffix=".bkup"
+FILES="zshrc vimrc tmux.conf"
+#files="test1 test2 test3"
+SUFFIX=".bkup"
+BASEDIR=$(pwd)
 
-
-for file in $files
+for FILE in $FILES
 do	
-	if [ -f $HOME/.$file ]
+	if [ -f $HOME/.$FILE ]
 	then
-		echo $file
-		#mv $file $file$suffix
-		
+		echo "Found $HOME/.$FILE -> Moving to $HOME/.$FILE$SUFFIX"
+		mv $HOME/.$FILE $HOME/.$FILE$SUFFIX
 	fi
+	echo "Creating symbolic link from $HOME/.$FILE to $BASEDIR/$FILE"
+	ln -s $BASEDIR/$FILE $HOME/.$FILE
 done
