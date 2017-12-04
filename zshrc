@@ -79,7 +79,7 @@ setprompt() {
 #${PR_RESET}${PR_BLUE}>${PR_BRIGHT_BLUE}>${PR_BRIGHT_WHITE}>${PR_RESET} '
 
 		PROMPT=$'
-${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> '
+${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
 	else
 
 		PROMPT=$'%n@%m (%~)\n>>> '
