@@ -53,3 +53,9 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+"Powerline config
+set laststatus=2
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
