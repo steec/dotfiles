@@ -3,9 +3,9 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-cd ~
+#cd ~
 
-export PATH=/home/stephen/bin:/home/stephen/code/android/adt-bundle-linux/sdk/platform-tools/:/home/stephen/code/android/adt-bundle-linux/sdk/tools/:$PATH
+export PATH=/home/stephen/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
@@ -31,11 +31,11 @@ compinit
 
 # vcs_info configuration
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '(%b)%S'
+#zstyle ':vcs_info:*' formats '(%b)%{%f%}'
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '!'
-zstyle ':vcs_info:*' stagedstr '+'
-zstyle ':vcs_info:*' formats '(%b)%S %u%c'
+zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}★%{%f%}'
+zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}★%{%f%}'
+zstyle ':vcs_info:*' formats "(%b) %c%u%{%f%} "
 
 if [[ "$TERM" == "xterm" ]]; then
 	export TERM=xterm-256color
