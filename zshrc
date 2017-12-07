@@ -88,9 +88,10 @@ fi
 function precmd() {
 
 		if [[ -w $PWD ]]; then
-			PR_PWDCOLOR=$'%{\e[32m%}'
+			#PR_PWDCOLOR=$'%{\e[32m%}'
+			PR_PWDCOLOR="%{%F{002}%}"
 		else
-				PR_PWDCOLOR=$'%{\e[31m%}'
+				PR_PWDCOLOR="%{%F{001}%}"
 		fi
 		vcs_info
 
@@ -111,15 +112,16 @@ setprompt() {
 		done
 
 		PR_RESET="%{$reset_color%}"
-		PR_PWD_DEFAULT=$'%{\e[38;5;78m%}'
+		#PR_PWD_DEFAULT=$'%{\e[38;5;78m%}'
 		PR_PWD_YELLOW=$'%{\e[38;5;226m%}'
+		PR_PWD_DEFAULT="%{%F{022}%}"
 
 #		PROMPT=$'${PR_RED} \u2584
 #${PR_BRIGHT_BLUE}\u2587${PR_RED}\u2518${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
 #${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
 
 		PROMPT=$'
-%{%F{magenta}%}%n${PR_RESET} on %{%F{cyan}%}%m%{%F{015}%} at ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
+%{%F{003}%}%n%{%F{015%} on %{%F{004}%}%m%{%F{015}%} at ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
 %{%b%}${PR_RESET}%{%F{013}%}➤%{%F{012}%}➤%{%F{014%}➤${PR_RESET} '
 
 #		PROMPT=$'
