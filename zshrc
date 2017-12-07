@@ -3,8 +3,6 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-#cd ~
-
 export PATH=/home/stephen/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
@@ -22,12 +20,16 @@ bindkey "^R" history-incremental-search-backward
 #bindkey "\e[5~" beginning-of-buffer-or-history
 
 # End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/stephen/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+d=.dircolors
+test -r $d && eval "$(dircolors $d)"
 
 # vcs_info configuration
 autoload -Uz vcs_info
@@ -74,12 +76,12 @@ setprompt() {
 #${PR_BRIGHT_BLUE}\u2587${PR_RED}\u2518${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
 #${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
 
-#		PROMPT=$'
-#${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
-#${PR_RESET}${PR_BLUE}>${PR_BRIGHT_BLUE}>${PR_BRIGHT_WHITE}>${PR_RESET} '
-
 		PROMPT=$'
-${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
+${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}
+${PR_RESET}${PR_BLUE}>${PR_BRIGHT_BLUE}>${PR_BRIGHT_WHITE}>${PR_RESET} '
+
+#		PROMPT=$'
+#${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
 	else
 
 		PROMPT=$'%n@%m (%~)\n>>> '
@@ -100,16 +102,13 @@ setprompt
 ############## Aliases
 alias ls="ls --color -h --group-directories-first"
 alias lsa="ls -Al"
-#alias ls="ls++"
-#alias lsl="ls++ --potsf"
-#alias lsa="ls++ --potsf -a"
-#alias lsn="ls"
+alias lsl="ls -l"
 alias du1="du -h --max-depth=1"
+
 #alias to make Octopress not glob
 alias rake="noglob rake"
+
 #alias pacman="pacman-color"
 alias vi="vim"
 
 
-d=.dircolors
-test -r $d && eval "$(dircolors $d)"
