@@ -44,11 +44,7 @@ conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
 #nm-applet & 
 
-#exec gnome-session-cinnamon
-#exec ck-launch-session dbus-launch openbox-session 
 #exec i3
-exec /home/stephen/bin/startdwm
-#exec enlightenment_start
-#exec openbox-session
-#exec awesome
+#exec /home/stephen/bin/startdwm
+exec awesome
 #exec wmii
