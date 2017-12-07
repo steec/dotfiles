@@ -119,7 +119,7 @@ setprompt() {
 #${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
 
 		PROMPT=$'
-%{%F{magenta}%}%n${PR_RESET} on %{%F{cyan}%}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}
+%{%F{magenta}%}%n${PR_RESET} on %{%F{cyan}%}%m%{%F{015}%} at ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
 %{%b%}${PR_RESET}%{%F{013}%}➤%{%F{012}%}➤%{%F{014%}➤${PR_RESET} '
 
 #		PROMPT=$'
