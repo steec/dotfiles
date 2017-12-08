@@ -51,7 +51,7 @@ for color in {000..255}; do
 done
 
 
-ZSH_SPECTRUM_TEXT=${ZSH_SPECTRUM_TEXT:-Arma virumque cano Troiae qui primus ab oris}
+ZSH_SPECTRUM_TEXT=${ZSH_SPECTRUM_TEXT:-This used to be in some other language I dont understand}
 
 # Show all 256 colors with color number
 function spectrum_ls() {
@@ -121,7 +121,7 @@ setprompt() {
 #${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
 
 		PROMPT=$'
-%{%F{013}%}%n%{%F{008%} on %{%F{014}%}%m%{%F{008}%} in ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
+%{%F{013}%}%n%{%F{007%} ⇨ %{%F{014}%}%m%{%F{007}%} ⇨ ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
 %{%b%}${PR_RESET}%{%F{013}%}➤%{%F{012}%}➤%{%F{014%}➤${PR_RESET} '
 #		PROMPT=$'
 #${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
