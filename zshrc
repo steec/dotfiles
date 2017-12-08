@@ -79,7 +79,7 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}★%{%f%}'
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}★%{%f%}'
-zstyle ':vcs_info:*' formats "(%b) %c%u%{%f%} "
+zstyle ':vcs_info:*' formats "%{%F{012}%}◀%{%F{012}%} %b %c%u%{%f%} %{%F{012}%}► %{%F{007}%}"
 
 if [[ "$TERM" == "xterm" ]]; then
 	export TERM=xterm-256color
@@ -121,9 +121,8 @@ setprompt() {
 #${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
 
 		PROMPT=$'
-%{%F{003}%}%n%{%F{015%} on %{%F{004}%}%m%{%F{015}%} at ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
+%{%F{013}%}%n%{%F{008%} on %{%F{014}%}%m%{%F{008}%} in ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
 %{%b%}${PR_RESET}%{%F{013}%}➤%{%F{012}%}➤%{%F{014%}➤${PR_RESET} '
-
 #		PROMPT=$'
 #${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
 	else
