@@ -133,10 +133,10 @@ setprompt() {
 
 setprompt
 
-#if [ $(tty) = '/dev/tty1' ]; then
-#	startx 2> /dev/null
-#	logout
-#fi
+if [ $(tty) = '/dev/tty1' ]; then
+	startx 2> /dev/null
+	logout
+fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
