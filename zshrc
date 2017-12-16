@@ -3,7 +3,7 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-export PATH=/home/stephen/bin:$PATH
+export PATH=/home/stephen/bin/:/home/stephen/.local/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
@@ -22,6 +22,8 @@ bindkey "^R" history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
+
+zstyle ':completion:*' completer _complete _ignored
 zstyle :compinstall filename '/home/stephen/.zshrc'
 
 autoload -Uz compinit
@@ -29,10 +31,6 @@ compinit
 # End of lines added by compinstall
 
 #-----------SPECTRUM_LS------------------
-#! /bin/zsh
-# A script to make using 256 colors in zsh less painful.
-# P.C. Shyamshankar <sykora@lucentbeing.com>
-# Copied from http://github.com/sykora/etc/blob/master/zsh/functions/spectrum/
 
 typeset -AHg FX FG BG
 
@@ -70,6 +68,7 @@ function spectrum_bls() {
 #-------SPECTRUM_LS---------------
 
 
+
 d=.dircolors
 test -r $d && eval "$(dircolors $d)"
 
@@ -77,9 +76,9 @@ test -r $d && eval "$(dircolors $d)"
 autoload -Uz vcs_info
 #zstyle ':vcs_info:*' formats '(%b)%{%f%}'
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}★%{%f%}'
-zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}★%{%f%}'
-zstyle ':vcs_info:*' formats "%{%F{012}%}◀%{%F{012}%} %b %c%u%{%f%} %{%F{012}%}► %{%F{007}%}"
+zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
+zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
+zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%}%b %c%u%{%f%} %{%F{012}%} %{%F{007}%}"
 
 if [[ "$TERM" == "xterm" ]]; then
 	export TERM=xterm-256color
@@ -121,8 +120,8 @@ setprompt() {
 #${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
 
 		PROMPT=$'
-%{%F{013}%}%n%{%F{007%} ⇨ %{%F{014}%}%m%{%F{007}%} ⇨ ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
-%{%b%}${PR_RESET}%{%F{013}%}➤%{%F{012}%}➤%{%F{014%}➤${PR_RESET} '
+%{%F{013}%}%n%{%F{007}%} ⇨ %{%F{014}%}%m%{%F{007}%} ⇨ ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
+%{%b%}%{%F{013}%}►%{%F{012}%}►%{%F{014}%}►%f '
 #		PROMPT=$'
 #${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
 	else

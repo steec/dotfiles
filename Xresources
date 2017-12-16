@@ -1,4 +1,4 @@
-#include "/home/stephen/currcolors"
+#include "/home/stephen/.currcolors"
 !#include "colors/current"
 
 ! URxvt -----------------------------------------------------------------------
@@ -7,14 +7,14 @@
 !URxvt.boldItalicFont: 		-*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
 !URxvt.ItalicFont:			-*-terminus-medium-*-*-*-17-*-*-*-*-*-*-* 
 !URxvt.font:					xft:DejaVuSansMono:size=10
-URxvt.font:					xft:Inconsolata:style=Regular:size=10
+URxvt.font:					xft:FuraCode Nerd Font:style=Regular:size=11
 !URxvt.font:					xft:LiberationMono-Regular:size=11
 
 URxvt*iconFile:				/home/stephen/.icons/Faenza/apps/32/utilities-terminal.png
 URxvt*scrollBar:			false
 URxvt*depth: 				32
 URxvt.perl-ext-common:		default,matcher
-URxvt.url-launcher:			/usr/bin/dwb
+URxvt.url-launcher:			/usr/bin/surf
 URxvt.matcher.button:		1
 
 
