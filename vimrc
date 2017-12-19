@@ -1,11 +1,13 @@
 syntax on
 filetype plugin indent on
 
-au filetype java setlocal mp=javac\ %
-au filetype cpp setlocal mp=g++\ %
-au filetype c setlocal mp=gcc\ %
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
-:let java_highlight_all=1
+"au filetype java setlocal mp=javac\ %
+"au filetype cpp setlocal mp=g++\ %
+"au filetype c setlocal mp=gcc\ %
+
+":let java_highlight_all=1
 
 set guifont=Inconsolata\ 9
 set nu
