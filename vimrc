@@ -26,11 +26,12 @@ set hlsearch
 set vb t_vb=".
 set incsearch
 colorscheme bubblegum2-mine
+"colorscheme molokai
 "colo mine
 
-set cursorline
-hi clear Cursorline 
-hi Cursorline gui=underline cterm=underline
+"set cursorline
+"hi clear Cursorline 
+"hi Cursorline gui=underline cterm=underline
 
 "toggle NERDTree
 map <silent> <F3> :NERDTree<CR>
